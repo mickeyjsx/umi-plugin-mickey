@@ -1,0 +1,48 @@
+{
+  "name": "umi-plugin-mickey",
+  "version": "1.0.0",
+  "description": "Bundle mickey based app with umi",
+  "main": "lib/index.js",
+  "keywords": [
+    "mickey",
+    "umi",
+    "plugin"
+  ],
+  "author": {
+    "name": "bubkoo",
+    "email": "bubkoo.wy@gmail.com"
+  },
+  "license": "MIT",
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mickeyjsx/umi-plugin-mickey.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mickeyjsx/umi-plugin-mickey/issues"
+  },
+  "homepage": "https://github.com/mickeyjsx/umi-plugin-mickey#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.0.0-beta.46",
+    "@babel/core": "^7.0.0-beta.46",
+    "@babel/preset-env": "^7.0.0-beta.46",
+    "babel-eslint": "^7.2.3",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "eslint": "^4.11.0",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.3.0",
+    "husky": "^0.14.3",
+    "rimraf": "^2.6.1"
+  },
+  "scripts": {
+    "lint": "eslint --ext .js,.jsx src",
+    "build": "rimraf lib && babel src --out-dir lib",
+    "prebuild": "npm run lint",
+    "prepublish": "npm run build",
+    "precommit": "npm run lint"
+  }
+}

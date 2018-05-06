@@ -1,6 +1,6 @@
 {
   "name": "umi-plugin-mickey",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Bundle mickey based app with umi",
   "main": "lib/index.js",
   "keywords": [
@@ -44,5 +44,8 @@
     "prebuild": "npm run lint",
     "prepublish": "npm run build",
     "precommit": "npm run lint"
+  },
+  "dependencies": {
+    "extract-text-webpack-plugin": "^3.0.2"
   }
 }

@@ -5,7 +5,7 @@ export default function (api, options = {}) {
   const {
     entry = './src/index.jsx',
     name = 'main',
-    enableFileHash = false,
+    filehash = false,
   } = options
 
   const { RENDER } = api.placeholder
@@ -19,13 +19,13 @@ export default function (api, options = {}) {
     `,
   ))
 
-  if (!enableFileHash || name) {
+  if (!filehash || name) {
     api.register('modifyWebpackConfig', ({ memo }) => {
       if (name) {
         memo.entry = { [name]: memo.entry.umi }
       }
 
-      if (!enableFileHash) {
+      if (!filehash) {
         memo.output.filename = '[name].js'
         memo.output.chunkFilename = '[name].async.js'
         memo.plugins = memo.plugins.map((plugin) => {

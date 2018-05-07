@@ -6,6 +6,7 @@ export default function (api, options = {}) {
     entry = './src/index.jsx',
     name = 'main',
     filehash = false,
+    outputPath = 'dist',
   } = options
 
   const { RENDER } = api.placeholder
@@ -19,7 +20,7 @@ export default function (api, options = {}) {
     `,
   ))
 
-  if (!filehash || name) {
+  if (!filehash || name || outputPath) {
     api.register('modifyWebpackConfig', ({ memo }) => {
       if (name) {
         memo.entry = { [name]: memo.entry.umi }
@@ -38,6 +39,10 @@ export default function (api, options = {}) {
 
           return plugin
         })
+      }
+
+      if (outputPath) {
+        memo.output.path = path.resolve(process.cwd(), outputPath)
       }
 
       return memo

@@ -1,6 +1,6 @@
 {
   "name": "umi-plugin-mickey",
-  "version": "1.0.4",
+  "version": "2.0.0",
   "description": "Bundle mickey based app with umi",
   "main": "lib/index.js",
   "keywords": [
@@ -28,6 +28,7 @@
     "@babel/cli": "^7.0.0-beta.46",
     "@babel/core": "^7.0.0-beta.46",
     "@babel/preset-env": "^7.0.0-beta.46",
+    "@babel/preset-react": "^7.0.0-beta.47",
     "babel-eslint": "^7.2.3",
     "babel-plugin-add-module-exports": "^0.2.1",
     "eslint": "^4.11.0",

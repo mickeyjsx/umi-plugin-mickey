@@ -7,7 +7,7 @@ export default function (api, options = {}) {
 
   const filepath = path.resolve(process.cwd(), entry)
 
-  api.addEntryCodeAhead(`
+  api.modifyEntryRender(`
   const start = require('${filepath}').default;
   start(require('./router').default)
   `)

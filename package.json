@@ -1,6 +1,6 @@
 {
   "name": "umi-plugin-mickey",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Bundle mickey based app with umi",
   "main": "lib/index.js",
   "keywords": [

@@ -5,10 +5,10 @@ export default function (api, options = {}) {
     entry = './src/index.jsx',
   } = options
 
-  const filepath = path.resolve(process.cwd(), entry)
+  const filepath = api.winPath(path.resolve(process.cwd(), entry));
 
   api.modifyEntryRender(`
-  const start = require('${filepath}').default;
-  start(require('./router').default)
+    const start = require('${filepath}').default;
+    start(require('./router').default)
   `)
 }
